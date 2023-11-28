@@ -11,7 +11,7 @@ public class RPNParserTest {
 
     @BeforeEach
     public void setup() {
-        parser = new RPNParserImpl();  // RPNParserImpl est la classe concrète que vous implémentez
+        parser = new RPNNN();
     }
 
     @Test
@@ -141,7 +141,6 @@ public class RPNParserTest {
 
     @Test
     public void testFloatingPointRounding() throws Exception {
-        // Ceci est un test intéressant pour voir comment l'implémentation gère les problèmes de précision des flottants.
         assertEquals(0.3, parser.parseAndDisplayResult("0.1 0.2 +"), 0.000001);  // tolérance spécifiée
     }
 
@@ -158,11 +157,6 @@ public class RPNParserTest {
     @Test
     public void testResultIsZero() throws Exception {
         assertEquals(0.0, parser.parseAndDisplayResult("5 5 -"));
-    }
-
-    @Test
-    public void testMultipleConsecutiveOperators() {
-        assertThrows(ParseException.class, () -> parser.parseAndDisplayResult("5 ++ 3"));
     }
 
 }

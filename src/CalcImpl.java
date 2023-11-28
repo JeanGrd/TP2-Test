@@ -1,6 +1,10 @@
 public class CalcImpl implements Calc {
 
-    private Stack stack = new StackImpl();
+    private Stack stack;
+
+    public CalcImpl (Stack s) {
+        this.stack = s;
+    }
 
     @Override
     public void enterValue(double value) {

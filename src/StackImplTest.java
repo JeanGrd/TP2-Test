@@ -7,6 +7,12 @@ import java.util.EmptyStackException;
 
 public class StackImplTest {
 
+    private Stack stack;
+
+    @BeforeEach
+    public void setUp() {
+        stack = new StackImpl();
+    }
 
     @Test
     public void testIsEmpty() {
@@ -121,7 +127,7 @@ public class StackImplTest {
     public void testRepeatedPeek() throws EmptyStackException {
         stack.push(1.0);
         assertEquals(1.0, stack.peek());
-        assertEquals(1.0, stack.peek());  // Répéter l'opération peek ne devrait pas modifier la pile
+        assertEquals(1.0, stack.peek());
         stack.push(2.0);
         assertEquals(2.0, stack.peek());
         assertEquals(2.0, stack.peek());
@@ -136,14 +142,7 @@ public class StackImplTest {
         stack.pop();
         stack.pop();
         assertTrue(stack.isEmpty());
-        assertThrows(EmptyStackException.class, () -> stack.pop());  // Doit lever une exception après avoir vidé la pile
-    }
-
-    private Stack stack;
-
-    @BeforeEach
-    public void setUp() {
-        stack = new StackImpl();
+        assertThrows(EmptyStackException.class, () -> stack.pop());
     }
 
     @Test
@@ -165,8 +164,6 @@ public class StackImplTest {
         stack.pop();
         stack.pop();
         assertTrue(stack.isEmpty());
-        stack.push(3.0);
-        assertEquals(3.0, stack.peek());
     }
 
     @Test

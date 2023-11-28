@@ -9,7 +9,7 @@ public class CalcTest {
 
     @BeforeEach
     public void setUp() {
-        calculator = new CalcImpl();  // Implémentation fictive pour l'instant.
+        calculator = new CalcImpl(new StackImpl());
     }
 
     @Test

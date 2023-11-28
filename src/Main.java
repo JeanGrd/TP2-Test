@@ -2,11 +2,9 @@ import java.text.ParseException;
 import java.util.Scanner;
 
 public class Main {
-
     private static final String EXIT_COMMAND = ".exit";
-
     public static void main(String[] args) {
-        RPNParserImpl parser = new RPNParserImpl();
+        RPNNN parser = new RPNNN();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("RPN Calc");
