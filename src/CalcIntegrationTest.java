@@ -233,6 +233,9 @@ public class CalcIntegrationTest {
         assertEquals(Double.NaN, calculator.displayValueOnTop()); // Addition avec NaN donne toujours NaN
     }
 
+    /**
+     * Teste l'entrée et les opérations avec des valeurs infinies.
+     */
     @Test
     public void testPushingInfinity() throws NotEnoughOperandsOnStackException {
         calculator.enterValue(Double.POSITIVE_INFINITY);
@@ -248,6 +251,9 @@ public class CalcIntegrationTest {
         assertEquals(Double.NaN, calculator.displayValueOnTop()); // Infinity + (-Infinity) donne NaN
     }
 
+    /**
+     * Teste des cas limites de division.
+     */
     @Test
     public void testEdgeCasesOfDivision() {
         calculator.enterValue(Double.MIN_VALUE);

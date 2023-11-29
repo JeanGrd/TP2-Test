@@ -8,7 +8,9 @@ public interface Stack {
     /**
      * Returns the number of items in this stack.
      */
-    public int getSize(); /**
+    public int getSize();
+    /**
+     *  Push an item
      */
     public void push(double item);
     /**

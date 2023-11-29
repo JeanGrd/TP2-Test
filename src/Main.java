@@ -1,6 +1,11 @@
 import java.text.ParseException;
 import java.util.Scanner;
 
+/**
+ * Point d'entrée principal pour une application de calculatrice en notation polonaise inversée (RPN).
+ * Cette application lit les expressions RPN de l'utilisateur, les évalue et affiche les résultats.
+ * L'utilisateur peut quitter l'application en tapant '.exit'.
+ */
 public class Main {
     private static final String EXIT_COMMAND = ".exit";
     public static void main(String[] args) {
