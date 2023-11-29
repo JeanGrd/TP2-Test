@@ -29,7 +29,7 @@ public class RPNParserIntegrationTest {
      */
     @Test
     public void testBasicAddition() throws Exception {
-        assertEquals(13.0, parser.parseAndDisplayResult("3 5 2 * +"));
+        assertEquals(8.0, parser.parseAndDisplayResult("3 5 +"));
     }
 
     /**

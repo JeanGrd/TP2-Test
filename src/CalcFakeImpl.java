@@ -33,7 +33,7 @@ public class CalcFakeImpl implements Calc {
      */
     @Override
     public void subtract() throws NotEnoughOperandsOnStackException {
-        this.lastValue -= 2;
+        this.lastValue = 2 - this.lastValue;
     }
 
     /**
@@ -57,7 +57,7 @@ public class CalcFakeImpl implements Calc {
         if (lastValue == 0) {
             throw new DivideByZeroException();
         }
-        this.lastValue /= 2;
+        this.lastValue = 2.0 / this.lastValue;
     }
 
     /**

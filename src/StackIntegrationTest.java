@@ -1,9 +1,9 @@
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Classe de tests d'intégration pour StackImpl.

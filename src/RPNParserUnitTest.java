@@ -38,7 +38,7 @@ public class RPNParserUnitTest {
     @Test
     void testSubstractionCalculation() throws Exception {
         double result = rpn.parseAndDisplayResult("2 4 -");
-        assertEquals(2, result);
+        assertEquals(-2, result);
     }
 
     /**
@@ -56,7 +56,7 @@ public class RPNParserUnitTest {
     @Test
     void testDivisionCalculation() throws Exception {
         double result = rpn.parseAndDisplayResult("2 4 /");
-        assertEquals(2, result);
+        assertEquals(0.5f, result);
     }
 
     /**
