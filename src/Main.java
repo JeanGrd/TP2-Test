@@ -4,7 +4,9 @@ import java.util.Scanner;
 public class Main {
     private static final String EXIT_COMMAND = ".exit";
     public static void main(String[] args) {
-        RPNNN parser = new RPNNN();
+        StackImpl stack = new StackImpl();
+        CalcImpl calc = new CalcImpl(stack);
+        RPNParserImpl parser = new RPNParserImpl(calc);
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("RPN Calc");

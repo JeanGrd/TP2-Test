@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
 
-public class StackImplTest {
+public class StackIntegrationTest {
 
     private Stack stack;
 

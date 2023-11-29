@@ -5,13 +5,15 @@ import java.text.ParseException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class RPNParserTest {
+public class RPNParserIntegrationTest {
 
     private RPNParser parser;
 
     @BeforeEach
     public void setup() {
-        parser = new RPNNN();
+        StackImpl stack = new StackImpl();
+        CalcImpl calc = new CalcImpl(stack);
+        parser = new RPNParserImpl(calc);
     }
 
     @Test
